@@ -6,11 +6,11 @@ Learn Swift syntax with a playground. Playgrounds are a new way to test out code
 Topics covered:
 
 * Declaring variables and constants
-* Arrays and Dictionaries
+* Arrays and dictionaries
 * Loops
-* Tuples and functions
+* Functions and tuples
 * UIKit Views 
-* Functions and Optional Parameters
+* Optional parameters in functions
 * Generics and inout
-* Function as a parameter
+* A function as a parameter
 * High order functions for Functional Programming

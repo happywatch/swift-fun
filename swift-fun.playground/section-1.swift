@@ -67,10 +67,36 @@ for x in 1..<10 {
 
 
 /***
-Tuples and functions
+Functions and Tuples
 ***/
 
-var aTuple = ("Bill", 42, UIColor.blueColor()!, CGPointMake(20, 30))
+func printHello() {
+    println("Hello")
+}
+
+printHello()
+
+
+
+func printArea(height: Int, width: Int){
+    let area = height * width
+    println("The area is \(area)")
+}
+
+printArea(10, 12)
+
+
+
+func getArea(height: Int, width: Int) -> Int{
+    return height * width
+}
+
+println("The area is \(getArea(10, 12))")
+
+
+
+
+var aTuple = ("Bill", 42, UIColor.blueColor(), CGPointMake(20, 30))
 
 func willReturnTuple() -> (String, Int, UIColor, CGPoint) {
     return aTuple
