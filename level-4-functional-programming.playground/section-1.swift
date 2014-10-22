@@ -86,6 +86,61 @@ levelFour
 
 
 /***
+Sorting
+***/
+
+sorted([3,2,1])
+
+let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+
+sorted(names)
+
+// REVERSED
+
+var reversed: [String]
+
+// level 1
+func backwards(s1: String, s2: String) -> Bool {
+    return s1 > s2
+}
+reversed = sorted(names, backwards)
+reversed
+
+// level 2, Closure Expression Syntax
+reversed = sorted(names, { (s1: String, s2: String) -> Bool in
+    return s1 > s2
+})
+reversed
+
+
+
+// level 3, on a single line
+reversed = sorted(names, { (s1: String, s2: String) -> Bool in return s1 > s2 } )
+reversed
+
+// level 4, Inferring Type From Context
+reversed = sorted(names, { s1, s2 in return s1 > s2 } )
+reversed
+
+/* BUG in compiler. Level 5 & 6 do not currently work. http://stackoverflow.com/questions/26249784/implicit-returns-from-single-expression-closures-in-swift-playground
+
+// level 5, Implicit Returns from Single-Expression Closures
+reversed = sorted(names, { s1, s2 in s1 > s2 } )
+reversed
+
+// level 6, Shorthand Argument Names
+reversed = sorted(names, { $0 > $1 } )
+reversed
+*/
+
+// level 7, String type operator function
+reversed = sorted(names, >)
+reversed
+
+
+
+
+/***
 High order functions
 ***/
 
@@ -101,8 +156,11 @@ let sum = numbers.reduce(0) { $0 + $1 }
 sum
 
 
-/***
-Sorting
-***/
 
-sorted([3,2,1])
+
+
+
+
+
+
+

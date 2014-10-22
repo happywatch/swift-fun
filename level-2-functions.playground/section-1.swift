@@ -29,15 +29,33 @@ func printArea(height: Int, width: Int){
 printArea(10, 12)
 
 
+
+
 // Named parameters and a return type
 
-func calculateArea(#height: Int, #width: Int) -> Int{
+func calcArea1(with height: Int, and width: Int) -> Int{
+    return height * width
+}
+calcArea1(with: 10, and: 12)
+
+func calcArea2(#height: Int, #width: Int) -> Int{
+    return height * width
+}
+calcArea2(height: 10, width: 12)
+
+
+// Default parameters
+
+func calcArea3(height: Int = 10, width: Int = 12) -> Int{
     return height * width
 }
 
+calcArea3()
+
+
 // Making use of the returned value
 
-println("The area is \(calculateArea(height: 10, width: 12))") // Notice that the parameter names are included in the function call
+println("The area is \(calcArea3(height: 10, width: 12))") // Notice that the parameter names are included in the function call
 
 
 
@@ -110,29 +128,4 @@ if let age = search(who: "Doc") {
 } else {
     println("This person wasn't found")
 }
-
-
-
-/***
-Views
-(Click the EYE icon in the sidebar to see the results)
-***/
-
-let word = "Hello"
-
-let aColor = UIColor.cyanColor()
-
-let aFont = UIFont.systemFontOfSize(42)
-
-let attrStr = NSAttributedString (string: word, attributes: [NSForegroundColorAttributeName: aColor, NSFontAttributeName: aFont])
-
-let aFrame = CGRect(x:0,y:0,width:200,height:100)
-
-let aView = UIView(frame: aFrame)
-aView.backgroundColor = UIColor.redColor()
-
-let aLabel = UILabel(frame: aView.frame)
-aLabel.attributedText = attrStr
-
-aView.addSubview(aLabel)
 
