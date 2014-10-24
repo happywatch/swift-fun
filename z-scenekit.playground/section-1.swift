@@ -1,8 +1,4 @@
-// Playground - noun: a place where people can play
-
-//import Cocoa
-
-var str = "Hello, playground"
+// Original by tado, https://gist.github.com/tado/93f9a0ce9eb66850f6aa
 
 import SceneKit
 import XCPlayground

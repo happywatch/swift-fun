@@ -1,3 +1,5 @@
+//Original by Apple, https://developer.apple.com/swift/blog/?id=13
+
 func fizzBuzz(number: Int) -> String {
     switch (number % 3, number % 5) {
     case (0, 0):
